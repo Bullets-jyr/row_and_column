@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
           // 실행 중인 앱의 사이즈: MediaQuery.of(context).size
           // width: MediaQuery.of(context).size.width: Column 테스트
           // height: MediaQuery.of(context).size.height: Row 테스트
-          height: MediaQuery.of(context).size.height,
+          // height: MediaQuery.of(context).size.height,
           child: Row(
             // MainAxisAlignment, CrossAxisAlignment 동시 적용 가능
 
@@ -45,6 +45,11 @@ class HomeScreen extends StatelessWidget {
             // center - 가운데 (CrossAxisAlignment 설정하지 않아도 세팅되는 Default 값)
             // stretch - 최대한으로 늘린다. (강제로 하위 위젯들의 사이즈가 늘어난다.)
             crossAxisAlignment: CrossAxisAlignment.start,
+
+            // MainAxisSize: Column(세로), Row(가로) - 주측 크기
+            // max - 최대 (child 위젯과 관련없이)
+            // min - 최소
+            mainAxisSize: MainAxisSize.min,
             children: [
               Container(
                 color: Colors.red,
